@@ -70,6 +70,44 @@ for (i = 0; i < arrayLen; i++) {
 oddSumDisplay.innerHTML += oddSum
 
 
+// ! JSNACK 4
+let firstArray = [], secondArray = []
+const firstArrayLen = RNG(1,100), secondArrayLen = RNG(1,100)
+
+
+//genero e popolo i due array con valori casuali
+for (i = 0; i < firstArrayLen; i++) {
+    let num = RNG(0,100)
+    firstArray.push(num)
+}
+
+for (i = 0; i < secondArrayLen; i++) {
+    let num = RNG(0,100)
+    secondArray.push(num)
+}
+
+//determino quale sia l'array più grande quello più piccolo
+let bigArray = (firstArray.length > secondArray.length) ? firstArray : secondArray
+let smallArray = (firstArray.length > secondArray.length) ? secondArray : firstArray
+
+console.warn("PRIMA:")
+console.log("Lunghezza array più grande: " + bigArray.length)
+console.log("Lunghezza array più piccolo: " + smallArray.length)
+
+// popolo l'array più piccolo con valori casualiali, finché i due array non hanno la stessa lunghezza
+
+for (i = 0; smallArray.length < bigArray.length; i++) {
+    console.log(smallArray.length)
+    smallArray.push(RNG(1,100))
+}
+
+console.warn("DOPO:")
+console.log("Lunghezza array più grande: " + bigArray.length)
+console.log("Lunghezza array più piccolo: " + smallArray.length)
+
+
+
+
 
 
 
