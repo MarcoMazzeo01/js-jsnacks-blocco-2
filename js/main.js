@@ -97,7 +97,7 @@ console.log("Lunghezza array più piccolo: " + smallArray.length)
 // popolo l'array più piccolo con valori casualiali, finché i due array non hanno la stessa lunghezza
 
 for (i = 0; smallArray.length < bigArray.length; i++) {
-    console.log(smallArray.length)
+    console.log(smallArray.length, smallArray)
     smallArray.push(RNG(1,100))
 }
 
