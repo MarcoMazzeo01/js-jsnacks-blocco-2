@@ -36,11 +36,40 @@ js2_button.addEventListener("click",function(){
 
     fakeList.innerHTML = ""
 
-    for (i = 0; i <= totalGuests; i++) {
+    for (i = 0; i < totalGuests; i++) {
         let guest = `${names[RNG(0,totNames)]} ${surnames[RNG(0,totSurnames)]}`
         fakeList.innerHTML += `<li>${guest}</li>`
     }
 })
+
+
+// ! JSNACK 3
+let js3_array = document.getElementById("js3_array")
+let oddSumDisplay = document.getElementById("oddSum")
+
+const js3_min = 0, js3_max = 100;
+const arrayLen = 50
+let numberArray = []
+let oddSum = 0;
+
+for (i = 0; i < arrayLen; i++) {
+    //genera array di numeri random
+    let randomNum = RNG(js3_min,js3_max)
+    numberArray.push(randomNum)
+
+    //mostra array, evidenziando in rosso quelli dispari
+    let string = (i % 2 == 0) ? `<span>${randomNum}</span>, ` : `<span class="text-danger">${randomNum}</span>, `
+    string = (i == arrayLen - 1) ? string.slice(0,-2) : string
+    js3_array.innerHTML += string
+
+    //esercizio
+    oddSum = (i % 2 == 0) ? oddSum + 0 : oddSum + numberArray[i]
+
+}
+
+oddSumDisplay.innerHTML += oddSum
+
+
 
 
 
