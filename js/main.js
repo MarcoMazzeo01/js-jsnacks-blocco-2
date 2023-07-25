@@ -72,7 +72,7 @@ oddSumDisplay.innerHTML += oddSum
 
 // ! JSNACK 4
 let firstArray = [], secondArray = []
-const firstArrayLen = RNG(1,100), secondArrayLen = RNG(1,100)
+const firstArrayLen = RNG(1,50), secondArrayLen = RNG(1,50)
 
 
 //genero e popolo i due array con valori casuali
