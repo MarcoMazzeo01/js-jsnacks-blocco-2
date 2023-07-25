@@ -14,3 +14,33 @@ js1_button.addEventListener("click",function() {
     }
 
 })
+
+// ! JSNACK 2
+const names = ["Danilo","Fausto","Urbano","Alfonsina","Dora","Federica"]
+const surnames = ["Padovesi","Angelo","Delucci","Aidanza","Beneventi","Grecia"]
+
+const totalGuests = 10
+const totNames = names.length
+const totSurnames = surnames.length
+
+let fakeList = document.getElementById("fakeList")
+const js2_button = document.getElementById("js2_button")
+
+
+// funzione random
+function RNG(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+js2_button.addEventListener("click",function(){
+
+    fakeList.innerHTML = ""
+
+    for (i = 0; i <= totalGuests; i++) {
+        let guest = `${names[RNG(0,totNames)]} ${surnames[RNG(0,totSurnames)]}`
+        fakeList.innerHTML += `<li>${guest}</li>`
+    }
+})
+
+
+
